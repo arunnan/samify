@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { RouteProvider } from "@/app/providers/route-provider";
 import { ThemeProvider } from "@/app/providers/theme-provider";
-import "@/app/styles/globals.css";
+import "@/app/assets/styles/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={'scroll-smooth'}>
+    <html lang="en" className='scroll-smooth'>
       <body className={`${inter.variable} bg-primary antialiased`}>
         <RouteProvider>
           <ThemeProvider>
